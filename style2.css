@@ -1,0 +1,334 @@
+/*style2.css*/
+*{padding: 0px;margin: 0px;}
+#flash{
+  width:1260px;
+  height:610px;
+  margin: 0px 0px;
+  position: relative;}
+#flash #play{
+  width:100%;
+  height: 610px;
+  list-style: none;
+  position:absolute;
+  top:0px;
+  left:0px;}
+#flash #play li{
+  display: none;
+  position:absolute;
+  top:0px;left:0px;}
+#flash #play li img{
+  margin-left:-18px;
+  float: bottom;
+  height: 610px;
+  width: 1279.5px;}
+#button{
+  position: absolute;
+  bottom:20px;
+  left:610px;
+  list-style: none;}
+#button li{
+  margin-left: 10px;
+  float: left;}
+#button li div{
+  width:12px;
+  height: 12px;
+  background:#DDDDDD;
+  border-radius: 6px;
+  cursor: pointer;}
+#prev{
+  width:40px;
+  height:63px;
+  background:url("beijing.png") 0px 0px;
+  position: absolute;
+  top:205px;
+  left:10px;z-index: 1000;}
+#next{width:40px;
+  height:63px;
+  background:url("beijing.png") -40px 0px;
+  position: absolute;
+  top:205px;
+  right:10px;
+  z-index: 1000;}
+#prev:hover{
+  background:url(images/beijing.png) 0px -62px;}
+#next:hover{
+  background:url(images/beijing.png) -40px -62px;}
+*{/*对浏览器默认的样式进行清零*/
+	margin: 0;
+	padding: 0;
+}
+body { 
+	font-family:"微软雅黑"; 
+	font-size:14px; 
+}
+
+#container {/*#唯一*/
+	margin:0 auto; /*在页面居中*/
+	width:1260px; 
+	/*background-color: #6cf;*/
+}
+
+#header { 
+	height:640px;
+	width: 1260px;
+	/*background:#6cf; */
+	margin-bottom:5px;
+}
+.cover{
+	z-index:10;
+	object-fit:cover;}
+
+#font_title{
+	color: white;
+	font-size: 80px;
+	/*font-style:italic; */
+	margin-top: 0px; 
+	text-shadow:4px 4px 3px #6C6C6C;
+	text-align: left;
+  margin-left: 10px;
+  margin-right: 20px;
+	float: left;
+}
+.top{
+	z-index:30;
+/*	position:absolute;*/
+  /* 设置宽度高度背景颜色 */
+  height: 40px; 
+  width:1265px;
+  background:black;
+  position: fixed; /*固定在顶部*/
+  top: 0;/*离顶部的距离为0*/
+  margin-bottom: 5px;
+  margin-left: -10px;
+  left: 8px;
+}
+.top ul{
+	/*z-index:30;*/
+	/*position:absolute;有了以后不显示横向*/
+  /* 清除ul标签的默认样式 */
+  width: auto;/*宽度也改为自动*/
+  list-style-type: none;
+  white-space:nowrap;
+  overflow: hidden;
+  /*margin-left: 3%;*/
+  /* margin-top: 0;*/
+  padding: 0;
+}
+.top ul li {
+	float:left;  /*使li内容横向浮动，即横向排列 */
+  margin-right:3%;  /* 两个li之间的距离*/
+  position: relative;
+  overflow: hidden;
+}
+
+.top li a{
+   /* 设置链接内容显示的格式*/
+	display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+	color:white;
+  margin-top: 7px;
+  font-size: 15px;
+  text-align: center;
+  padding: 2px;
+  overflow: hidden;
+  text-decoration: none; /* 去除下划线 */  
+}
+.top li a:hover{
+  /* 鼠标选中时字体加粗 */
+  font-size: 16px;
+}
+.top ul li ul{
+  /* 设置二级菜单 */
+  margin-left: -0.2px;
+  background:black;
+  position: relative;
+  display: none; /* 默认隐藏二级菜单的内容 */
+
+}
+.top ul li ul li{
+  /* 二级菜单li内容的显示 */
+  float:none;
+  text-align: center;
+}
+.top ul li:hover ul{
+  /* 鼠标选中二级菜单内容时 */
+  display: block;
+}
+#panel,#flip
+{
+	padding:5px;
+	text-align:center;
+	background-color:#e5eecc;
+	border:solid 1px #c3c3c3;
+}
+#panel
+{
+	padding:50px;
+	display:none;
+}
+#main{ 
+	height:2600px;
+	width: 1250px;
+	margin-bottom:5px;
+}
+ #movie{
+  width: 100%;
+  height: 1700px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.title-inner{
+	height: 300px;
+	width: 1200px;
+	position:relative;
+	text-align: center;
+	margin-bottom:30px; 
+	margin-top: 20px;
+	margin-left: 25px;
+
+}
+.title-inner img{
+	height: 300px;
+	width: 1200px;
+	border-radius: 10px;
+	/*bottom是自己本身的，margin是两个物体上下的距离(外边距)padding内边距*/
+	/*margin-left: 75px;*/
+	/*margin-top:20px;*/
+}
+.title-inner span{
+  z-index:20;
+  font-family: "AnoRegular-Regular";
+  position:absolute;
+  color:white;
+  font-size:80px;
+  text-shadow:1px 1px 1px #6C6C6C;
+  font-weight:bold;
+  top: 110px;
+  left: 460px;
+}
+.content {
+/*position: fixed;*/
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:repeat(4, 290px);
+  /*height: 1080px;*/
+  /*padding: 35px;*////
+ /*grid-gap: 20px; <-- would also mess things up */
+}
+.tile {
+}
+ 
+.tile img {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  object-fit:cover;
+  border-radius:10px;
+  width: 320px;
+  height:220px;
+  margin-left:50px ;
+  border: 0;
+  margin-top: 20px;
+  /*padding: 5px;*/
+}
+ .tile span{
+	font-family: "Century";
+	font-size: 25px;
+	margin-left: 60px;
+  color: #444444;
+
+	font-smoothing: antialiased;
+ }
+ .tile span:hover{
+  color: #A9A9A9;
+ }
+ .tile span:visited{
+  color: #A9A9A9;
+ }
+#book{
+  width: 100%;
+  height: 500px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+} 
+.content2 {
+/*position: fixed;*/
+  box-sizing: border-box;
+  width: 1250PX;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:repeat(2, 290px);
+  /*height: 600px;*/
+  /*height: 1080px;*/
+  /*padding: 35px;*/
+ /*grid-gap: 20px; <-- would also mess things up */
+}
+.title-second{
+	height: 300px;
+	width: 1200px;
+	position:relative;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom:60px; 
+	margin-left: 25px;
+}
+.title-second img{
+	height: 300px;
+	width: 1200px;
+	border-radius: 10px;
+	/*bottom是自己本身的，margin是两个物体上下的距离(外边距)padding内边距*/
+	/*margin-left: 75px;*/
+	margin-top:20px;
+}
+.title-second span{
+  z-index:20;
+	font-family: "AnoRegular-Regular";
+	position:absolute;
+	color:white;
+	font-size:80px;
+	text-shadow:1px 1px 1px #6C6C6C;
+  font-weight:bold;
+	top: 110px;
+	left: 460px;
+}
+#footer { 
+  display: block;
+  background: none;
+  border-top: 2px solid #000000;
+  color: white;
+  background-color:#000000 ;
+  text-align: center;
+  position: relative;
+  height:60px; 
+  width: auto;
+  clear: both;
+}
+#footer p{
+  font-family: "微软雅黑";
+  text-align: bottom;
+  font-size: 15px;
+  position: absolute;
+  bottom: 0px;
+  padding:0px;
+}
+
+a{
+text-decoration:none;
+}
+a:hover{
+  color:gray;
+  text-decoration:underline;
+}
+ a:visited{
+  color:gray;
+  text-decoration:none;
+  }
+#footer h3{
+  text-align: right;
+  padding-right: 10px;
+  margin-top: 40px;
+  color:gray;
+}

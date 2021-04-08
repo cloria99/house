@@ -1,0 +1,251 @@
+/*style5.css*/
+*{/*对浏览器默认的样式进行清零*/
+	margin: 0;
+	padding: 0;
+}
+body { 
+	font-family:"微软雅黑"; 
+	font-size:14px; 
+}
+
+#container {/*#唯一*/
+	margin:0 auto; /*在页面居中*/
+	width:1250px; 
+}
+#header { 
+	height:440px;
+	width: 1250px;
+	/*background:#6cf; */
+	margin-bottom:5px;
+}
+.title-inner{
+  height: 300px;
+  width: 1200px;
+  position:relative;
+  text-align: center;
+  margin-bottom:30px; 
+  margin-top: 20px;
+  margin-left: 25px;
+
+}
+.title-inner img{
+  height:400px;
+  width:1200px;
+  border-radius:10px;
+}
+.title-inner span{
+  z-index:20;
+  font-family: "AnoRegular-Regular";
+  position:absolute;
+  color:white;
+  font-size:80px;
+  text-shadow:1px 1px 1px #6C6C6C;
+  font-weight:bold;
+  top: 110px;
+  left: 460px;
+}
+.cover{
+	z-index:10;
+	object-fit:cover;}
+#font_title{
+	color: white;
+	font-size: 70px;
+	font-style:italic;
+	margin-top: -9px; 
+	text-shadow:4px 4px 3px #6C6C6C;
+	text-align: left;
+  margin-right: 20px;
+	float: left;
+}
+.top{
+	z-index:30;
+/*	position:absolute;*/
+    /* 设置宽度高度背景颜色 */
+    height: 40px; 
+    width:1280px;
+    background:black;
+    position: fixed; /*固定在顶部*/
+    top: 0;/*离顶部的距离为0*/
+    margin-bottom: 5px;
+    margin-left: -10px;
+    left: 8px;
+}
+.top ul{
+	/*position:absolute;有了以后不显示横向*/
+    /* 清除ul标签的默认样式 */
+    width: auto;/*宽度也改为自动*/
+    list-style-type: none;
+    white-space:nowrap;
+    overflow: hidden;
+    padding: 0;
+}
+.top ul li {
+	float:left;  /*使li内容横向浮动，即横向排列 */
+    margin-right:3%;  /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+}
+
+.top li a{
+   /* 设置链接内容显示的格式*/
+	display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+	color:white;
+	margin-top: 7px;
+	font-size: 15px;
+  text-align: center;
+  padding: 2px;
+  overflow: hidden;
+  text-decoration: none; /* 去除下划线 */  
+}
+.top li a:hover{
+    /* 鼠标选中时字体加粗 */
+  font-size: 16px;
+}
+.top ul li ul{
+    /* 设置二级菜单 */
+    margin-left: -0.2px;
+    background:black;
+    position: relative;
+    display: none; /* 默认隐藏二级菜单的内容 */
+
+}
+.top ul li ul li{
+    /* 二级菜单li内容的显示 */
+    float:none;
+    text-align: center;
+}
+.top ul li:hover ul{
+    /* 鼠标选中二级菜单内容时 */
+    display: block;
+}
+#panel,#flip
+{
+	padding:5px;
+	text-align:center;
+	background-color:#e5eecc;
+	border:solid 1px #c3c3c3;
+}
+#panel
+{
+	padding:50px;
+	display:none;
+}
+#main{ 
+	height:700px;
+	width: 1250px;
+	margin-bottom:5px;
+}
+
+.content {
+/*position: fixed;*/
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:repeat(2, 290px);
+}
+.tile {}
+ 
+.tile img {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  object-fit:cover;
+  border-radius:10px;
+  width: 320px;
+  height:220px;
+  margin-left:50px ;
+  border: 0;
+  margin-top: 20px;
+}
+ .tile span{
+  font-family: "Century";
+  font-size: 25px;
+  margin-left: 60px;
+  color: #444444;
+  font-smoothing: antialiased;
+ }
+ .tile span:hover{
+  color: #A9A9A9;
+ }
+ .tile span:visited{
+  color: #A9A9A9;
+ }
+#book{
+  width: 100%;
+  height: 500px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+} 
+.content2 {
+  box-sizing: border-box;
+  width: 1250PX;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:repeat(2, 290px);
+}
+.title-second{
+	height: 300px;
+	width: 1200px;
+	position:relative;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom:60px; 
+	margin-left: 25px;
+}
+.title-second img{
+	height: 300px;
+	width: 1200px;
+	border-radius: 10px;
+	/*bottom是自己本身的，margin是两个物体上下的距离(外边距)padding内边距*/
+	margin-top:20px;
+}
+.title-second span{
+	z-index:20;
+	font-family: "AnoRegular-Regular";
+	position:absolute;
+	color:white;
+	font-size:80px;
+	text-shadow:1px 1px 1px #6C6C6C;
+    font-weight:bold;
+	top: 110px;
+	left: 580px;
+}
+#footer { 
+    display: block;
+    background: none;
+    border-top: 2px solid #000000;
+    color: white;
+    background-color:#000000 ;
+    text-align: center;
+    position: relative;
+    height:60px; 
+    width: auto;
+    clear: both;
+}
+#footer p{
+    font-family: "微软雅黑";
+    text-align: bottom;
+    font-size: 15px;
+    position: absolute;
+    bottom: 0px;
+    padding:0px;
+}
+a{
+text-decoration:none;
+}
+a:hover{
+  color:gray;
+  text-decoration:underline;
+}
+ a:visited{
+  color:gray;
+  text-decoration:none;
+  }
+#footer h3{
+  text-align: right;
+  padding-right: 10px;
+  margin-top: 40px;
+  color:gray;
+}
