@@ -1,2 +1,2 @@
-# house
-hello world
+# house/excel数据分析
+基于excel对一支股票的进行数据处理，求均值方差等，求收益率，进行正态检验。
